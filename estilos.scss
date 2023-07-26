@@ -36,11 +36,6 @@ $color5: rgba(255,255,255,.75);
     background-position: center;
 }
 
-.principal:hover{
-    transform: scale(1.1);
-    transition: 10s;
-}
-
 .titulo:hover{
 color: $color3 ; 
 transform: scale(1.1);
@@ -115,22 +110,22 @@ body{
 }
     
 .galeria-item7{
-     grid-column: 1/3;
-     grid-row: 4/5;
+    grid-column: 1/3;
+    grid-row: 4/5;
 }
     
 .galeria-item11{
-     grid-column: 1/4;
-     grid-row: 6/7;
+    grid-column: 1/4;
+    grid-row: 6/7;
 }
     
 .galeria-item15{
-     grid-column: 1/3;
-     grid-row: 7/8;
+    grid-column: 1/3;
+    grid-row: 7/8;
 }
     
 .galeria-item18{
-     grid-column: 2/4;
+    grid-column: 2/4;
 }
 
 
@@ -276,24 +271,58 @@ body{
 
 /* Sobre Mi */
 
-.titulo-sobremi{
+@media only screen and (max-width: 420px){
+    .titulo-sobremi{
+        font-size: 12px;
+        text-align: center;
+        justify-content: center;
+        color: $color5;
+    }
+
+    .img-santi{
+        display: flex;
+        height: 300px !important ;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        justify-content: center
+    }
+    
+
+}
+
+    .titulo-sobremi{
     display: flex-block;
     text-align: center;
     justify-content: center;
     margin: 20px;
     color: $color5;
-}
+    }
 
-.img-santi{
+    .img-santi{
     display: flex;
-    width: 1500px;
     height: 600px;
     text-align: center;
     margin-top: 20px;
-    justify-content: center
-}
+    justify-content: center;
+    }
+
+
+
 
 /* Contacto */
+
+@media only screen and (max-width: 575px){
+
+    .form-control{
+        width: 90% !important;
+    }
+    .mapa{
+        display: flex;
+        justify-content: center;
+        margin: 20px;
+    }
+}
 
 h4{
     color: $color5;
@@ -304,7 +333,8 @@ h4{
 
 .mb-3{
 
-    width: 700px;
+    width: 70%;
+    margin: 50px;
 }
 
 .form-label{
@@ -338,13 +368,107 @@ h4{
 
 /* Tienda */
 
-.proximamente{
-    color: $color2;
-    font-size: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    flex-direction: column;
-    margin-top: 200px;
-    margin-bottom: 400px; 
+
+@media only screen and (max-width:567px) {
+    .titulotienda{
+        color: $color2;
+        font-size: 20px;
+        text-align: center;
+        justify-content: center;
+        margin: 10px;
+    }
+
+    .proximamente{
+        font-size: 25px !important;
+        color: $color2;
+        background-color: red;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .contenedortienda{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        align-items: center;
+        padding: 5%;
+    
+    }
+    
+    .tienda-imagen{
+        width: 100%;
+        height: 200px;
+        background-size: cover;
+        background-position: center;
+        object-fit: cover;
+        padding: 10px;
+    }
+
+        
+    .descripcion-tienda{
+        color: $color5;
+        text-align: center;
+    }
+    
+    .descripcion-tienda:hover{
+        color: $color2;
+    }
+
 }
+
+@media only screen and (min-width:568px){
+    .titulotienda{
+        color: $color2;
+        text-align: center;
+        justify-content: center;
+        margin: 20px;
+    }
+    
+    
+    .proximamente{
+        color: $color2;
+        background-color: red;
+        font-size: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        flex-direction: column;
+        margin-top: 20px;
+    
+    }
+    
+    .descripcion-tienda{
+        color: $color5;
+        text-align: center;
+    }
+    
+    .descripcion-tienda:hover{
+        color: $color2;
+    }
+    
+    
+    .contenedortienda{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+        align-items: center;
+        padding: 5%;
+    
+    }
+        
+    
+    .tienda-imagen{ 
+        width: 100%;
+        height: 250px;
+        background-size: cover; 
+        background-position: center;
+        object-fit: cover;
+        padding: 10px;
+    }
+    
+    
+}
+
